@@ -14,14 +14,17 @@ import javax.swing.ImageIcon;
  */
 public class Inicio extends javax.swing.JFrame {
 
+    String user, nombre_usuario;
     /**
      * Creates new form Administrador
      */
     public Inicio() {
         initComponents();
+        user = Login.user;
         setTitle("Inicio");
+        setTitle("Administrador - Sesión de " + user);
         setLocationRelativeTo(null);
-        ImageIcon fondo = new ImageIcon("src/images/fondo2.jpg"); 
+        ImageIcon fondo = new ImageIcon("src/images/fondo.jpg"); 
         Icon icono = new ImageIcon(fondo.getImage().getScaledInstance(jLabel_Wallpaper.getWidth(),
                 jLabel_Wallpaper.getHeight(), Image.SCALE_DEFAULT)); 
         jLabel_Wallpaper.setIcon(icono);
@@ -38,14 +41,34 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton_RegistrarSocio = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jLabel_Wallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton_RegistrarSocio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/socio.png"))); // NOI18N
+        jButton_RegistrarSocio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_RegistrarSocioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton_RegistrarSocio, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 120, 100));
+
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel1.setText("Registrar Socios");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
         getContentPane().add(jLabel_Wallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton_RegistrarSocioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_RegistrarSocioActionPerformed
+
+        RegistrarSocios socios = new RegistrarSocios();
+        socios.setVisible(true);
+    }//GEN-LAST:event_jButton_RegistrarSocioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -90,6 +113,8 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton_RegistrarSocio;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel_Wallpaper;
     // End of variables declaration//GEN-END:variables
 }
