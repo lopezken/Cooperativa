@@ -158,6 +158,9 @@ public class RegistrarSocios extends javax.swing.JFrame {
                 pst.setString(3, apellido);
                 pst.setString(4, telefono);
                 pst.setString(5, user);
+                pst.executeUpdate();
+                cn.close();
+
                 
                 Limpiar();
                 txt_nombre.setBackground(Color.green);
