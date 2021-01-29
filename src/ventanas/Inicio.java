@@ -43,6 +43,8 @@ public class Inicio extends javax.swing.JFrame {
 
         jButton_RegistrarSocio = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jButton_RegistrarSocio1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel_Wallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -59,6 +61,18 @@ public class Inicio extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel1.setText("Registrar Socios");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
+
+        jButton_RegistrarSocio1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lista_socios.png"))); // NOI18N
+        jButton_RegistrarSocio1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_RegistrarSocio1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton_RegistrarSocio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 120, 100));
+
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel2.setText("Lista de Socios");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, -1, -1));
         getContentPane().add(jLabel_Wallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 400));
 
         pack();
@@ -69,6 +83,12 @@ public class Inicio extends javax.swing.JFrame {
         RegistrarSocios socios = new RegistrarSocios();
         socios.setVisible(true);
     }//GEN-LAST:event_jButton_RegistrarSocioActionPerformed
+
+    private void jButton_RegistrarSocio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_RegistrarSocio1ActionPerformed
+        
+        GestionarSocios gestionarSocios = new GestionarSocios();
+        gestionarSocios.setVisible(true);
+    }//GEN-LAST:event_jButton_RegistrarSocio1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -114,7 +134,9 @@ public class Inicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton_RegistrarSocio;
+    private javax.swing.JButton jButton_RegistrarSocio1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel_Wallpaper;
     // End of variables declaration//GEN-END:variables
 }
